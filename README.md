@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-# python实现12306相关功能
+﻿# python实现12306相关功能
 
 标签：python
 
 # 做一个更适合自己的12306
-=======
-﻿# python实现简易音乐播放器
->>>>>>> bad70faab4e14a60ba856f719c2e24d4fb707044
 
 ---
 
@@ -14,7 +10,6 @@
 
 python 3.6
 
-<<<<<<< HEAD
 ## 代码功能
 
 ① 查询所有有剩余车票的列车以及可以选择的座位类型
@@ -51,74 +46,18 @@ python 3.6
 
 容易发现**leftTicketDTO.train_date**字段为我们选择的日期，**leftTicketDTO.from_station**字段为我们的出发地，**leftTicketDTO.to_station**字段为目的地，所以我们可以用一个字典存入地点的中文名称和缩写，然后使用"url = 'http://kyfw.12306.cn/otn/leftTicket/queryZ?leftTicketDTO.train_date={}&leftTicketDTO.from_station={}&leftTicketDTO.to_station={}&purpose_codes=ADULT'.format(time,from_where,to_where)" 来表示url，之后使用requests模块来实现一系列的操作。
 
-具体实现过程请参考**12306.py**代码。
+具体实现过程请参考[12306.py](https://github.com/lhx1228/12306-program/blob/master/12306.py)代码。
 
 
-而**sendmail-12306.py**为发送邮件的代码，可以用来自动检测，如果有余票，会自动给邮箱发邮件。
+而[sendmail-12306.py](https://github.com/lhx1228/12306-program/blob/master/sendmail_12306.py)为发送邮件的代码，可以用来自动检测，如果有余票，会自动给邮箱发邮件。
 
 
 ## 代码截图
 
-
-
 ![](http://119.29.89.242/image/12306-3.PNG)
 
 ![](http://119.29.89.242/image/12306-4.PNG)
-=======
-win10
 
-## 代码功能
+## 代码地址
 
-① 输入歌曲名称后 播放相应的歌曲
-
-## 使用的库
-
-`pygame、tkinter、subprocess、os、sys、requests、re`
-
-此外，还需要使用到`ffmpeg`来进行歌曲转码，安装过程参考[这里](https://zh.wikihow.com/%E5%9C%A8Windows%E4%B8%8A%E5%AE%89%E8%A3%85FFmpeg%E7%A8%8B%E5%BA%8F)。
-
-## 结果展示
-
-初始：
-
-![](http://119.29.89.242/image/python_music_1.PNG)
-
-
-输入歌名后，点击播放：
-
-![](http://119.29.89.242/image/python_music_2.png)
-
-
-之后我们就可以听到歌曲了
-
-## 代码分析
-
-代码地址:[点击这里](https://github.com/lhx1228/MusicPlayer)
-
-首先看`start.py`：
-
-start.py文件使用`tkinter`库，简单的设计了一个输入框架，用以输入歌曲名，当点击播放时，调用`show_entry_fields`函数，将输入框隐藏(`master.withdraw()`)，调用`subprocess`库运行下一个py文件`get_songID.py`。(**使用subprocess库是因为其可以无窗口运行**)
-
-然后看`get_songID.py`:
-
-这个文件根据爬虫的简单应用找出歌曲的ID
-
-然后看`get_MusicURL.py`:
-
-这个文件根据歌曲ID，运行爬虫相关找出歌曲的URL，将其下载
-
-然后看`MP3towav.py`:
-
-因为pygame播放音乐对MP3的支持不太好，这里将其转码，转为wav格式的文件
-
-最后看`playMusic.py`:
-
-这个文件用来播放歌曲，代码含义注释都有，这里不再介绍
-
-## 代码运行方法
-
-将全部文件[下载](https://github.com/lhx1228/MusicPlayer)下来，放入同一个文件运行`start.py`即可。
-
-
-
->>>>>>> bad70faab4e14a60ba856f719c2e24d4fb707044
+[12306-program](https://github.com/lhx1228/12306-program)
